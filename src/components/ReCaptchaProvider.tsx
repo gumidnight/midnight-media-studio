@@ -1,45 +1,38 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { ReactNode, useEffect, useState, useContext, createContext } from 'react';
 
-declare global {
-  interface Window {
-    grecaptcha: {
-      ready: (callback: () => void) => void;
-      execute: (siteKey: string, options: { action: string }) => Promise<string>;
-    };
-  }
-}
-
-// Replace with your actual reCAPTCHA v3 site key from https://www.google.com/recaptcha/admin
-export const RECAPTCHA_SITE_KEY = '6LesiWwsAAAAABx8hyDs5HxMe9sSQq8j9jHAAKd2';
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LesiWwsAAAAABx8hyDs5HxMe9sSQq8j9jHAAKd2';
 
 interface ReCaptchaContextType {
-  executeRecaptcha: (action: string) => Promise<string | null>;
   isLoaded: boolean;
+  executeRecaptcha: (action: string) => Promise<string>;
 }
 
 const ReCaptchaContext = createContext<ReCaptchaContextType>({
-  executeRecaptcha: async () => null,
-  isLoaded: false,
+  isLoaded: true,
+  executeRecaptcha: async () => '',
 });
 
-export function useReCaptcha() {
-  return useContext(ReCaptchaContext);
+interface ReCaptchaProviderProps {
+  children: ReactNode;
 }
 
-export function ReCaptchaProvider({ children }: { children: ReactNode }) {
+declare global {
+  interface Window {
+    grecaptcha: any;
+  }
+}
+
+export function ReCaptchaProvider({ children }: ReCaptchaProviderProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // Skip if already loaded or if using placeholder key
-    if (RECAPTCHA_SITE_KEY === 'YOUR_RECAPTCHA_SITE_KEY') {
-      console.warn('reCAPTCHA: Using placeholder key. Replace RECAPTCHA_SITE_KEY with your actual key.');
-      setIsLoaded(true); // Allow form to work without reCAPTCHA for demo
-      return;
-    }
-
-    if (window.grecaptcha) {
+    const isPlaceholder = RECAPTCHA_SITE_KEY === '6LesiWwsAAAAABx8hyDs5HxMe9sSQq8j9jHAAKd2' || 
+                          !process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    
+    if (isPlaceholder) {
+      console.warn('reCAPTCHA: Using placeholder key. Replace NEXT_PUBLIC_RECAPTCHA_SITE_KEY with your actual key.');
       setIsLoaded(true);
       return;
     }
@@ -48,33 +41,24 @@ export function ReCaptchaProvider({ children }: { children: ReactNode }) {
     script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
     script.async = true;
     script.defer = true;
-    
-    script.onload = () => {
-      window.grecaptcha.ready(() => {
-        setIsLoaded(true);
-      });
+    script.onload = () => setIsLoaded(true);
+    script.onerror = () => {
+      console.error('Failed to load reCAPTCHA script');
+      setIsLoaded(true);
     };
-
-    document.head.appendChild(script);
+    document.body.appendChild(script);
 
     return () => {
-      // Cleanup script on unmount if needed
-      const existingScript = document.querySelector(`script[src*="recaptcha"]`);
-      if (existingScript) {
-        existingScript.remove();
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
       }
     };
   }, []);
 
-  const executeRecaptcha = async (action: string): Promise<string | null> => {
-    // Return dummy token if using placeholder key (for demo purposes)
-    if (RECAPTCHA_SITE_KEY === 'YOUR_RECAPTCHA_SITE_KEY') {
-      return 'demo_token_replace_with_real_recaptcha';
-    }
-
-    if (!isLoaded || !window.grecaptcha) {
-      console.error('reCAPTCHA not loaded');
-      return null;
+  const executeRecaptcha = async (action: string): Promise<string> => {
+    if (!window.grecaptcha) {
+      console.warn('reCAPTCHA not loaded');
+      return '';
     }
 
     try {
@@ -82,13 +66,26 @@ export function ReCaptchaProvider({ children }: { children: ReactNode }) {
       return token;
     } catch (error) {
       console.error('reCAPTCHA execution failed:', error);
-      return null;
+      return '';
     }
   };
 
   return (
-    <ReCaptchaContext.Provider value={{ executeRecaptcha, isLoaded }}>
+    <ReCaptchaContext.Provider value={{ isLoaded, executeRecaptcha }}>
       {children}
     </ReCaptchaContext.Provider>
   );
 }
+
+export function useReCaptcha() {
+  const context = useContext(ReCaptchaContext);
+  if (!context) {
+    return {
+      isLoaded: true,
+      executeRecaptcha: async () => '',
+    };
+  }
+  return context;
+}
+
+export { RECAPTCHA_SITE_KEY };

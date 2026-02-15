@@ -1,14 +1,12 @@
 version: '3.8'
 
 services:
-  web:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  portfolio:
+    image: midnight-media-studio:latest
     container_name: midnight-media-studio
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "8080:3000"
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1
@@ -20,6 +18,16 @@ services:
       start_period: 40s
     networks:
       - midnight-network
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: midnight-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run --token eyJhIjoiOTVhY2ViMTc5MGFmMTBjZTk2NzU0MTk0YjJiMTE5NTEiLCJ0IjoiYTgyNGViMWEtYjYxNS00ZjNmLWFlOTUtYmVhZmVhYmYxZmQ1IiwicyI6IlptTXlZVEk0T0dNdE9USTBZaTAwTURBeUxXSmhabU10TjJOaFlXUmpPRGcxWkdNMCJ9
+    networks:
+      - midnight-network
+    depends_on:
+      - portfolio
 
 networks:
   midnight-network:
