@@ -1,0 +1,222 @@
+{
+  "site": {
+    "name": "Midnight Media Studio",
+    "url": "https://studio.midnightclub.media",
+    "description": "Professional web development studio specializing in modern, high-performance websites and web applications.",
+    "email": "studio@midnightclub.media",
+    "phone": "+357 96304316",
+    "location": "Remote - Worldwide"
+  },
+  "hero": {
+    "badge": "Premium Web Development Studio",
+    "headline": "We Build",
+    "headlineAccent": "Digital Excellence",
+    "subheadline": "Midnight Media Studio creates stunning, high-performance websites and web applications that help businesses stand out in the digital landscape.",
+    "ctaPrimary": "View Projects",
+    "ctaSecondary": "Contact Us",
+    "stats": [
+      { "value": "30+", "label": "Projects Delivered" },
+      { "value": "5+", "label": "Happy Clients" },
+      { "value": "2+", "label": "Years Experience" },
+      { "value": "99.9%", "label": "Client Satisfaction" }
+    ]
+  },
+  "clients": {
+    "sectionLabel": "Trusted By",
+    "sectionTitle": "Companies We've Worked With",
+    "list": [
+      { "name": "AGENCY", "logo": "/images/clients/client-1.png", "url": "" },
+      { "name": "GAMERS UNITED", "logo": "/images/clients/client-2.png", "url": "http://www.gamersunited.cy/" },
+      { "name": "Midnight Club", "logo": "/images/clients/client-3.png", "url": "" },
+      { "name": "Artemis Beauty Salon", "logo": "/images/clients/client-4.png", "url": "https://artemisbeautysalon.com/" }
+
+    ]
+  },
+  "projects": {
+    "sectionLabel": "Our Work",
+    "sectionTitle": "Featured Projects",
+    "sectionDescription": "Explore our latest work showcasing our expertise in creating exceptional digital experiences.",
+    "list": [
+      {
+        "title": "E-Commerce Platform",
+        "description": "A modern e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
+        "image": "/images/project-ecommerce.jpg",
+        "tech": ["Next.js", "TypeScript", "Tailwind", "Stripe"],
+        "liveUrl": "#",
+        "githubUrl": "#",
+        "featured": true
+      },
+{
+  "title": "Online Appointment Booking",
+  "description": "Modern appointment scheduling system allowing clients to easily book beauty services, select preferred treatments, choose available time slots, and manage their reservations in a seamless and user-friendly interface.",
+  "image": "/images/project-saas.jpg",
+  "tech": ["Next.js", "React", "Tailwind CSS", "JSON", "Docker"],
+  "liveUrl": "#",
+  "githubUrl": "#",
+  "featured": true
+},
+
+      {
+        "title": "Restaurant Booking App",
+        "description": "Full-featured restaurant booking system with table management and customer notifications.",
+        "image": "/images/project-restaurant.jpg",
+        "tech": ["Next.js", "Prisma", "Tailwind", "Twilio"],
+        "liveUrl": "#",
+        "githubUrl": "#",
+        "featured": false
+      },
+      {
+        "title": "Portfolio Website",
+        "description": "Creative portfolio website for a digital artist with custom animations and gallery.",
+        "image": "/images/project-portfolio.jpg",
+        "tech": ["Next.js", "Framer Motion", "GSAP"],
+        "liveUrl": "#",
+        "githubUrl": "#",
+        "featured": false
+      },
+      {
+        "title": "Real Estate Platform",
+        "description": "Property listing platform with advanced search, virtual tours, and agent management.",
+        "image": "/images/project-realestate.jpg",
+        "tech": ["React", "Node.js", "MongoDB", "AWS"],
+        "liveUrl": "#",
+        "githubUrl": "#",
+        "featured": false
+      },
+      {
+        "title": "Fitness App",
+        "description": "Mobile-first fitness tracking application with workout plans and progress monitoring.",
+        "image": "/images/project-fitness.jpg",
+        "tech": ["React Native", "Firebase", "TypeScript"],
+        "liveUrl": "#",
+        "githubUrl": "#",
+        "featured": false
+      }
+    ]
+  },
+  "services": {
+    "sectionLabel": "What We Do",
+    "sectionTitle": "Our Services",
+    "sectionDescription": "End-to-end web development services to bring your digital vision to life.",
+    "list": [
+      {
+        "icon": "Code",
+        "title": "Website Development",
+        "description": "Custom-built, high-performance websites using modern technologies like Next.js, React, and TypeScript. We create responsive, accessible, and SEO-friendly web experiences.",
+        "features": ["Custom Design", "Responsive Layouts", "Performance Optimized", "Accessibility Compliant"],
+        "color": "from-blue-500 to-indigo-600"
+      },
+      {
+        "icon": "Cloud",
+        "title": "Deployment & Infrastructure",
+        "description": "Enterprise-grade deployment solutions using Docker and Cloudflare. We ensure your applications are secure, scalable, and always available.",
+        "features": ["Docker Containers", "CI/CD Pipelines", "Cloudflare CDN", "SSL Certificates"],
+        "color": "from-emerald-500 to-teal-600"
+      },
+      {
+        "icon": "Search",
+        "title": "SEO Optimization",
+        "description": "Comprehensive SEO strategies to improve your search visibility. From technical SEO to content optimization, we help you rank higher.",
+        "features": ["Technical SEO", "Performance Audits", "Schema Markup", "Analytics Setup"],
+        "color": "from-amber-500 to-orange-600"
+      },
+      {
+        "icon": "Wrench",
+        "title": "Maintenance & Support",
+        "description": "Ongoing maintenance and support to keep your website running smoothly. Regular updates, security patches, and performance monitoring.",
+        "features": ["24/7 Monitoring", "Regular Updates", "Security Patches", "Performance Optimization"],
+        "color": "from-purple-500 to-pink-600"
+      }
+    ]
+  },
+  "techStack": {
+    "sectionLabel": "Technologies",
+    "sectionTitle": "Our Tech Stack",
+    "sectionDescription": "We use cutting-edge technologies to build fast, secure, and scalable applications.",
+    "list": [
+      { "name": "Next.js", "description": "React Framework" },
+      { "name": "React", "description": "UI Library" },
+      { "name": "TypeScript", "description": "Type Safety" },
+      { "name": "Docker", "description": "Containerization" },
+      { "name": "Cloudflare", "description": "CDN & Security" },
+      { "name": "Linux", "description": "Server OS" }
+    ]
+  },
+  "about": {
+    "sectionLabel": "About",
+    "sectionTitle": "Building the Future of the Web",
+    "description": "I'm Alexandros \"Midnight\" Georgiou, a systems engineer and web developer driven by a passion for building modern digital experiences. With a strong background in infrastructure, security, and software systems, I approach web development with an engineering mindset — prioritizing performance, reliability, and scalability in everything I create.",
+    "descriptionSecondary": "By day, I work as an engineer. By night, I build powerful websites and digital platforms through Midnight Media Studio, helping businesses transform their online presence using modern technologies like Next.js, Docker, and Cloudflare.",
+    "descriptionTertiary": "My mission is simple: to create fast, secure, and future-proof websites that help businesses grow and stand out in the digital world.",
+    "founder": {
+      "name": "Alexandros Georgiou",
+      "role": "Founder & Lead Developer",
+      "initials": "AG",
+      "quote": "Creating exceptional digital experiences is not just my job—it's my passion."
+    },
+    "image": "/images/about-developer.jpg",
+    "values": [
+      {
+        "icon": "Zap",
+        "title": "Performance First",
+        "description": "We build lightning-fast websites optimized for Core Web Vitals."
+      },
+      {
+        "icon": "Award",
+        "title": "Quality Code",
+        "description": "Clean, maintainable code following industry best practices."
+      },
+      {
+        "icon": "Users",
+        "title": "Client Focused",
+        "description": "Your success is our priority. We listen, adapt, and deliver."
+      },
+      {
+        "icon": "Heart",
+        "title": "Passionate Team",
+        "description": "We love what we do, and it shows in every project."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Get In Touch",
+    "sectionTitle": "Let's Build Something Great",
+    "sectionDescription": "Ready to start your next project? We'd love to hear from you.",
+    "quickResponseTitle": "Quick Response",
+    "quickResponseText": "We typically respond within 24 hours. For urgent inquiries, please call us directly.",
+    "availabilityText": "Available for new projects",
+    "socialLinks": [
+      { "name": "GitHub", "url": "https://github.com/gumidnight/" },
+      { "name": "LinkedIn", "url": "https://cy.linkedin.com/in/gumidnight" },
+      { "name": "Twitter", "url": "https://x.com/gumidnight/" }
+    ]
+  },
+  "navigation": {
+    "links": [
+      { "name": "Home", "href": "#home" },
+      { "name": "Projects", "href": "#projects" },
+      { "name": "Services", "href": "#services" },
+      { "name": "About", "href": "#about" },
+      { "name": "Contact", "href": "#contact" }
+    ],
+    "ctaText": "Get Started"
+  },
+  "footer": {
+    "tagline": "Premium web development studio crafting exceptional digital experiences for businesses worldwide.",
+    "services": [
+      { "name": "Web Development", "href": "#services" },
+      { "name": "Deployment", "href": "#services" },
+      { "name": "SEO", "href": "#services" },
+      { "name": "Maintenance", "href": "#services" }
+    ],
+    "company": [
+      { "name": "About", "href": "#about" },
+      { "name": "Projects", "href": "#projects" },
+      { "name": "Contact", "href": "#contact" }
+    ],
+    "legal": [
+      { "name": "Privacy Policy", "href": "#" },
+      { "name": "Terms of Service", "href": "#" }
+    ]
+  }
+}
