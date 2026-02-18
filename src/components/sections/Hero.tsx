@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 import content from '@/content/siteContent.json';
 
 export function Hero() {
@@ -37,12 +38,15 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="-mb-10"
+            className="-mb-10 relative h-44 sm:h-56 md:h-72"
           >
-            <img 
+            <Image 
               src="/images/full-logo.png" 
               alt="Midnight Media Studio" 
-              className="h-44 sm:h-56 md:h-72 mx-auto object-contain"
+              fill
+              priority
+              sizes="(max-width: 640px) 176px, (max-width: 768px) 224px, 288px"
+              className="object-contain"
             />
           </motion.div>
 

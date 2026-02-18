@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send } from 'lucide-react';
+import Image from 'next/image';
 
 interface Message {
   id: number;
@@ -117,8 +118,8 @@ export function LiveChat() {
             {/* Header */}
             <div className="bg-gradient-to-r from-accent-primary to-accent-secondary p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden">
-                  <img src="/images/livechat-avatar.png" alt="Support" className="w-full h-full object-cover" />
+                <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                  <Image src="/images/livechat-avatar.png" alt="Support" fill sizes="40px" className="object-cover" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Midnight Support</h3>

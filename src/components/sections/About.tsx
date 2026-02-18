@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Award, Users, Zap, Heart, LucideIcon } from 'lucide-react';
+import Image from 'next/image';
 import { FadeIn, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 import content from '@/content/siteContent.json';
 
@@ -27,12 +28,14 @@ export function About() {
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="relative z-10 rounded-2xl overflow-hidden"
+                className="relative z-10 rounded-2xl overflow-hidden aspect-[4/5]"
               >
-                <img
+                <Image
                   src={about.image}
                   alt="Developer workspace"
-                  className="w-full h-auto object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight-950/80 via-transparent to-transparent" />
               </motion.div>
