@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { FadeIn, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 import content from '@/content/siteContent.json';
 
@@ -32,11 +33,15 @@ export function Clients() {
                     className="card-glass p-8 flex items-center justify-center h-36 w-56 cursor-pointer card-hover block"
                   >
                     {client.logo.startsWith('/') ? (
-                      <img 
-                        src={client.logo} 
-                        alt={client.name} 
-                        className="h-20 max-w-full object-contain"
-                      />
+                      <div className="relative h-20 w-full">
+                        <Image 
+                          src={client.logo} 
+                          alt={client.name} 
+                          fill
+                          sizes="224px"
+                          className="object-contain"
+                        />
+                      </div>
                     ) : (
                       <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-accent-primary/30 to-accent-secondary/30 flex items-center justify-center">
                         <span className="text-white font-bold text-2xl">{client.logo}</span>

@@ -25,7 +25,7 @@
     "sectionLabel": "Trusted By",
     "sectionTitle": "Companies We've Worked With",
     "list": [
-      { "name": "AGENCY", "logo": "/images/clients/client-1.png", "url": "" },
+      { "name": "AGENCY", "logo": "/images/clients/client-1.png", "url": "https://agencyesportsclub.cy/" },
       { "name": "GAMERS UNITED", "logo": "/images/clients/client-2.png", "url": "http://www.gamersunited.cy/" },
       { "name": "Midnight Club", "logo": "/images/clients/client-3.png", "url": "" },
       { "name": "Artemis Beauty Salon", "logo": "/images/clients/client-4.png", "url": "https://artemisbeautysalon.com/" }

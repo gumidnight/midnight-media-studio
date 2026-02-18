@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import content from '@/content/siteContent.json';
 
 export function Navbar() {
@@ -41,7 +42,9 @@ export function Navbar() {
         <div className="hidden md:flex items-center justify-between h-32">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-3">
-            <img src="/images/logo.png" alt={site.name} className="w-24 h-24 rounded-xl object-contain" />
+            <div className="relative w-24 h-24">
+              <Image src="/images/logo.png" alt={site.name} fill priority sizes="96px" className="rounded-xl object-contain" />
+            </div>
             <span className="text-white font-bold text-2xl">{site.name.split(' ').slice(0, 2).join(' ')}</span>
           </a>
 

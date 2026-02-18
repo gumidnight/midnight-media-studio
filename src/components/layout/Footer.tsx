@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
+import Image from 'next/image';
 import content from '@/content/siteContent.json';
 
 export function Footer() {
@@ -19,7 +20,9 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/images/logo.png" alt={site.name} className="w-16 h-16 rounded-xl object-contain" />
+              <div className="relative w-16 h-16">
+                <Image src="/images/logo.png" alt={site.name} fill sizes="64px" className="rounded-xl object-contain" />
+              </div>
               <span className="text-white font-bold text-xl">{site.name.split(' ').slice(0, 2).join(' ')}</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">

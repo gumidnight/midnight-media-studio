@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import Image from 'next/image';
 import { FadeIn, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 import content from '@/content/siteContent.json';
 
@@ -33,10 +34,12 @@ export function Projects() {
                 className="group card-glass overflow-hidden h-full flex flex-col"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-midnight-950 via-transparent to-transparent" />
                   <div className="absolute top-4 right-4 flex gap-2">
@@ -85,10 +88,12 @@ export function Projects() {
                 className="group card-glass p-5 card-hover h-full flex flex-col"
               >
                 <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">{project.title}</h3>
