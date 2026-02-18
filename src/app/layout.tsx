@@ -25,13 +25,15 @@ export const metadata: Metadata = {
   description: 'Professional web development studio specializing in modern, high-performance websites and web applications. Next.js, React, TypeScript experts.',
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/favicon.svg',
   },
   manifest: '/manifest.json',
   keywords: ['web development', 'Next.js', 'React', 'TypeScript', 'web design', 'digital studio'],

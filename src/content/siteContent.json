@@ -15,21 +15,53 @@
     "ctaPrimary": "View Projects",
     "ctaSecondary": "Contact Us",
     "stats": [
-      { "value": "30+", "label": "Projects Delivered" },
-      { "value": "5+", "label": "Happy Clients" },
-      { "value": "2+", "label": "Years Experience" },
-      { "value": "99.9%", "label": "Client Satisfaction" }
+      {
+        "value": "30+",
+        "label": "Projects Delivered"
+      },
+      {
+        "value": "5+",
+        "label": "Happy Clients"
+      },
+      {
+        "value": "2+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "99.9%",
+        "label": "Client Satisfaction"
+      }
     ]
   },
   "clients": {
     "sectionLabel": "Trusted By",
     "sectionTitle": "Companies We've Worked With",
     "list": [
-      { "name": "AGENCY", "logo": "/images/clients/client-1.png", "url": "https://agencyesportsclub.cy/" },
-      { "name": "GAMERS UNITED", "logo": "/images/clients/client-2.png", "url": "http://www.gamersunited.cy/" },
-      { "name": "Midnight Club", "logo": "/images/clients/client-3.png", "url": "" },
-      { "name": "Artemis Beauty Salon", "logo": "/images/clients/client-4.png", "url": "https://artemisbeautysalon.com/" }
-
+      {
+        "name": "AGENCY",
+        "logo": "/images/clients/client-1.png",
+        "url": "https://agencyesportsclub.cy/"
+      },
+      {
+        "name": "GAMERS UNITED",
+        "logo": "/images/clients/client-2.png",
+        "url": "https://www.gamersunited.cy/"
+      },
+      {
+        "name": "Midnight Club",
+        "logo": "/images/clients/client-3.png",
+        "url": ""
+      },
+      {
+        "name": "Artemis Beauty Salon",
+        "logo": "/images/clients/client-4.png",
+        "url": "https://artemisbeautysalon.com/"
+      },
+      {
+        "name": "Hobbies Plus",
+        "logo": "/images/clients/client-5.png",
+        "url": "https://hobbiesplus.pages.dev/"
+      }
     ]
   },
   "projects": {
@@ -41,53 +73,83 @@
         "title": "E-Commerce Platform",
         "description": "A modern e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
         "image": "/images/project-ecommerce.jpg",
-        "tech": ["Next.js", "TypeScript", "Tailwind", "Stripe"],
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "Tailwind",
+          "Stripe"
+        ],
         "liveUrl": "#",
         "githubUrl": "#",
         "featured": true
       },
-{
-  "title": "Online Appointment Booking",
-  "description": "Modern appointment scheduling system allowing clients to easily book beauty services, select preferred treatments, choose available time slots, and manage their reservations in a seamless and user-friendly interface.",
-  "image": "/images/project-saas.jpg",
-  "tech": ["Next.js", "React", "Tailwind CSS", "JSON", "Docker"],
-  "liveUrl": "#",
-  "githubUrl": "#",
-  "featured": true
-},
-
       {
-        "title": "Restaurant Booking App",
-        "description": "Full-featured restaurant booking system with table management and customer notifications.",
+        "title": "Online Appointment Booking",
+        "description": "Modern appointment scheduling system allowing clients to easily book beauty services, select preferred treatments, choose available time slots, and manage their reservations in a seamless and user-friendly interface.",
+        "image": "/images/project-saas.jpg",
+        "tech": [
+          "Next.js",
+          "React",
+          "Tailwind CSS",
+          "JSON",
+          "Docker"
+        ],
+        "liveUrl": "#",
+        "githubUrl": "#",
+        "featured": true
+      },
+      {
+        "title": "Restaurant Menu",
+        "description": "Premium digital restaurant menu with categorized items, price management, and interactive food galleries.",
         "image": "/images/project-restaurant.jpg",
-        "tech": ["Next.js", "Prisma", "Tailwind", "Twilio"],
+        "tech": [
+          "Next.js",
+          "Framer Motion",
+          "Tailwind",
+          "Cloudflare"
+        ],
         "liveUrl": "#",
         "githubUrl": "#",
         "featured": false
       },
       {
-        "title": "Portfolio Website",
-        "description": "Creative portfolio website for a digital artist with custom animations and gallery.",
-        "image": "/images/project-portfolio.jpg",
-        "tech": ["Next.js", "Framer Motion", "GSAP"],
+        "title": "Headless CMS Blog",
+        "description": "Enterprise-grade content platform with a focus on SEO, lightning-fast load times, and a seamless editing experience using a headless CMS.",
+        "image": "/images/project-blog.jpg",
+        "tech": [
+          "Next.js",
+          "Sanity.io",
+          "Tailwind",
+          "Vercel"
+        ],
         "liveUrl": "#",
         "githubUrl": "#",
         "featured": false
       },
       {
-        "title": "Real Estate Platform",
-        "description": "Property listing platform with advanced search, virtual tours, and agent management.",
-        "image": "/images/project-realestate.jpg",
-        "tech": ["React", "Node.js", "MongoDB", "AWS"],
+        "title": "Modern Landing Page",
+        "description": "High-conversion, performance-optimized landing page designed for modern digital agencies and SaaS products.",
+        "image": "/images/project-landing-best.jpg",
+        "tech": [
+          "Next.js",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Vercel"
+        ],
         "liveUrl": "#",
         "githubUrl": "#",
         "featured": false
       },
       {
-        "title": "Fitness App",
-        "description": "Mobile-first fitness tracking application with workout plans and progress monitoring.",
-        "image": "/images/project-fitness.jpg",
-        "tech": ["React Native", "Firebase", "TypeScript"],
+        "title": "Membership & Subscription Portal",
+        "description": "Secure membership platform with tiered subscription levels, recurring payments, protected content, and user profile management.",
+        "image": "/images/project-membership.jpg",
+        "tech": [
+          "Next.js",
+          "Stripe",
+          "Supabase",
+          "Tailwind"
+        ],
         "liveUrl": "#",
         "githubUrl": "#",
         "featured": false
@@ -103,28 +165,48 @@
         "icon": "Code",
         "title": "Website Development",
         "description": "Custom-built, high-performance websites using modern technologies like Next.js, React, and TypeScript. We create responsive, accessible, and SEO-friendly web experiences.",
-        "features": ["Custom Design", "Responsive Layouts", "Performance Optimized", "Accessibility Compliant"],
+        "features": [
+          "Custom Design",
+          "Responsive Layouts",
+          "Performance Optimized",
+          "Accessibility Compliant"
+        ],
         "color": "from-blue-500 to-indigo-600"
       },
       {
         "icon": "Cloud",
         "title": "Deployment & Infrastructure",
         "description": "Enterprise-grade deployment solutions using Docker and Cloudflare. We ensure your applications are secure, scalable, and always available.",
-        "features": ["Docker Containers", "CI/CD Pipelines", "Cloudflare CDN", "SSL Certificates"],
+        "features": [
+          "Docker Containers",
+          "CI/CD Pipelines",
+          "Cloudflare CDN",
+          "SSL Certificates"
+        ],
         "color": "from-emerald-500 to-teal-600"
       },
       {
         "icon": "Search",
         "title": "SEO Optimization",
         "description": "Comprehensive SEO strategies to improve your search visibility. From technical SEO to content optimization, we help you rank higher.",
-        "features": ["Technical SEO", "Performance Audits", "Schema Markup", "Analytics Setup"],
+        "features": [
+          "Technical SEO",
+          "Performance Audits",
+          "Schema Markup",
+          "Analytics Setup"
+        ],
         "color": "from-amber-500 to-orange-600"
       },
       {
         "icon": "Wrench",
         "title": "Maintenance & Support",
         "description": "Ongoing maintenance and support to keep your website running smoothly. Regular updates, security patches, and performance monitoring.",
-        "features": ["24/7 Monitoring", "Regular Updates", "Security Patches", "Performance Optimization"],
+        "features": [
+          "24/7 Monitoring",
+          "Regular Updates",
+          "Security Patches",
+          "Performance Optimization"
+        ],
         "color": "from-purple-500 to-pink-600"
       }
     ]
@@ -134,12 +216,30 @@
     "sectionTitle": "Our Tech Stack",
     "sectionDescription": "We use cutting-edge technologies to build fast, secure, and scalable applications.",
     "list": [
-      { "name": "Next.js", "description": "React Framework" },
-      { "name": "React", "description": "UI Library" },
-      { "name": "TypeScript", "description": "Type Safety" },
-      { "name": "Docker", "description": "Containerization" },
-      { "name": "Cloudflare", "description": "CDN & Security" },
-      { "name": "Linux", "description": "Server OS" }
+      {
+        "name": "Next.js",
+        "description": "React Framework"
+      },
+      {
+        "name": "React",
+        "description": "UI Library"
+      },
+      {
+        "name": "TypeScript",
+        "description": "Type Safety"
+      },
+      {
+        "name": "Docker",
+        "description": "Containerization"
+      },
+      {
+        "name": "Cloudflare",
+        "description": "CDN & Security"
+      },
+      {
+        "name": "Linux",
+        "description": "Server OS"
+      }
     ]
   },
   "about": {
@@ -186,37 +286,88 @@
     "quickResponseText": "We typically respond within 24 hours. For urgent inquiries, please call us directly.",
     "availabilityText": "Available for new projects",
     "socialLinks": [
-      { "name": "GitHub", "url": "https://github.com/gumidnight/" },
-      { "name": "LinkedIn", "url": "https://cy.linkedin.com/in/gumidnight" },
-      { "name": "Twitter", "url": "https://x.com/gumidnight/" }
+      {
+        "name": "GitHub",
+        "url": "https://github.com/gumidnight/"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://cy.linkedin.com/in/gumidnight"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://x.com/gumidnight/"
+      }
     ]
   },
   "navigation": {
     "links": [
-      { "name": "Home", "href": "#home" },
-      { "name": "Projects", "href": "#projects" },
-      { "name": "Services", "href": "#services" },
-      { "name": "About", "href": "#about" },
-      { "name": "Contact", "href": "#contact" }
+      {
+        "name": "Home",
+        "href": "#home"
+      },
+      {
+        "name": "Projects",
+        "href": "#projects"
+      },
+      {
+        "name": "Services",
+        "href": "#services"
+      },
+      {
+        "name": "About",
+        "href": "#about"
+      },
+      {
+        "name": "Contact",
+        "href": "#contact"
+      }
     ],
     "ctaText": "Get Started"
   },
   "footer": {
     "tagline": "Premium web development studio crafting exceptional digital experiences for businesses worldwide.",
     "services": [
-      { "name": "Web Development", "href": "#services" },
-      { "name": "Deployment", "href": "#services" },
-      { "name": "SEO", "href": "#services" },
-      { "name": "Maintenance", "href": "#services" }
+      {
+        "name": "Web Development",
+        "href": "#services"
+      },
+      {
+        "name": "Deployment",
+        "href": "#services"
+      },
+      {
+        "name": "SEO",
+        "href": "#services"
+      },
+      {
+        "name": "Maintenance",
+        "href": "#services"
+      }
     ],
     "company": [
-      { "name": "About", "href": "#about" },
-      { "name": "Projects", "href": "#projects" },
-      { "name": "Contact", "href": "#contact" }
+      {
+        "name": "About",
+        "href": "#about"
+      },
+      {
+        "name": "Projects",
+        "href": "#projects"
+      },
+      {
+        "name": "Contact",
+        "href": "#contact"
+      }
     ],
     "legal": [
-      { "name": "Privacy Policy", "href": "#" },
-      { "name": "Terms of Service", "href": "#" }
+      {
+        "name": "Privacy Policy",
+        "href": "#"
+      },
+      {
+        "name": "Terms of Service",
+        "href": "#"
+      }
     ]
   }
 }

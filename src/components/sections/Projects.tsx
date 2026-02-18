@@ -14,7 +14,7 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 relative">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn className="text-center mb-16">
           <p className="text-sm uppercase tracking-widest text-accent-primary mb-4">{projects.sectionLabel}</p>
@@ -30,18 +30,19 @@ export function Projects() {
             <StaggerItem key={index} className="h-full">
               <motion.div
                 whileHover={{ y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="group card-glass overflow-hidden h-full flex flex-col"
+                transition={{ duration: 0.3, ease: 'easeOut' }}
+                className="group card-glass overflow-hidden h-full flex flex-col isolation-isolate will-change-transform"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl transform-gpu antialiased">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-700 ease-out scale-[1.01] group-hover:scale-110"
+                    priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-midnight-950 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-midnight-950/80 via-transparent to-transparent opacity-60" />
                   <div className="absolute top-4 right-4 flex gap-2">
                     <motion.a
                       whileHover={{ scale: 1.1 }}
@@ -84,17 +85,19 @@ export function Projects() {
             <StaggerItem key={index} className="h-full">
               <motion.div
                 whileHover={{ y: -5 }}
-                transition={{ duration: 0.2 }}
-                className="group card-glass p-5 card-hover h-full flex flex-col"
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                className="group card-glass p-5 card-hover h-full flex flex-col isolation-isolate will-change-transform"
               >
-                <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                <div className="relative aspect-[16/10] mb-4 rounded-lg overflow-hidden bg-midnight-950 transform-gpu antialiased">
+                  <div className="absolute -inset-[1px]">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-500 ease-out scale-[1.02] group-hover:scale-110"
+                    />
+                  </div>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 line-clamp-1">{project.title}</h3>
                 <p className="text-sm text-gray-400 mb-3 line-clamp-2 flex-1">{project.description}</p>

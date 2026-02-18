@@ -1,10 +1,10 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
-  <text x="16" y="22" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-weight="700" font-size="18">M</text>
+  <rect width="32" height="32" rx="7" fill="url(#grad)"/>
+  <path d="M7 23V9L16 18L25 9V23" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
   <defs>
-    <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#6366f1"/>
-      <stop offset="1" stop-color="#8b5cf6"/>
+    <linearGradient id="grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
     </linearGradient>
   </defs>
 </svg>
