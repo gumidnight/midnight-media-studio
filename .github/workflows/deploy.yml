@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - migration/cloudflare-pages
   pull_request:
 
 jobs:
